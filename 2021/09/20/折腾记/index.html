@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="生命在于折腾">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="折腾记">
+<meta property="og:url" content="http://yoursite.com/2021/09/20/折腾记/index.html">
+<meta property="og:site_name" content="奔跑的bug">
+<meta property="og:description" content="生命在于折腾">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/20/4JAprt.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Yt2rt.jpg">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/20/4JAcQA.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4YuEan.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Yun2T.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4YlJmD.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Y1abF.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Y1wE4.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4YnlNt.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Y8PfA.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4Y8rX6.png">
+<meta property="og:updated_time" content="2021-09-21T12:08:11.106Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="折腾记">
+<meta name="twitter:description" content="生命在于折腾">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/09/20/4JAprt.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2021/09/20/折腾记/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>折腾记 | 奔跑的bug</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">奔跑的bug</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">我的生涯一片无悔，我想起那天下午夕阳下的奔跑，是我逝去的青春。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/20/折腾记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小峰锅">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奔跑的bug">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">折腾记
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-09-20 19:00:03 19:00:03" itemprop="dateCreated datePublished" datetime="2021-09-20T19:00:03+08:00">2021-09-20 19:00:03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-09-21 20:08:11 20:08:11" itemprop="dateModified" datetime="2021-09-21T20:08:11+08:00">2021-09-21 20:08:11</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2021/09/20/折腾记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/09/20/折腾记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">14 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <center>生命在于折腾</center>
+
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&nbsp;&nbsp;终于想起我还有个blog，似乎从3月底就开始折腾，到现在基本没停过，这段时间学习的东西有点多，但是输出几乎没有，总也想归纳总结一下留作记录，奈何拖延症晚期一拖再拖，也没有所谓的deadline来催促，这次主要记录今年两个重大折腾项目，一个是挖矿，一个是homelab，又叫All in one，主要功能是存储。</p>
+<h1 id="挖矿"><a href="#挖矿" class="headerlink" title="挖矿"></a>挖矿</h1><p>&nbsp;&nbsp;去年年底入了ThinkPad笔记本变成了主力机，这样之前服役挺长时间的nuc便闲置了，后来想着nuc的性能还是可以的，便用作一些实验，在windows中装虚拟机，装linux，相当于是作为各种测试用途，基本长时间不关机，这为背景，后来偶然间发现竟还有可以用cpu来挖的虚拟币，大概研究了一下，注册了一个钱包，找了一个矿池用矿池提供的脚本就开挖，cpu瞬间100%，等了一段时间后就可以查到nuc上传的结果以及转换的虚拟货币值，一天大概是0.001左右，又看了下币价，300美元，emmmm，算了下一天能有两块钱，又算了一下nuc功率峰值在65w左右，一天一度半电，折合一元五角，赚5毛钱，可以可以，也算是有被动收入的人了，然币价是浮动的，所以nuc顶多算开荒先锋，赚多赚少并不重要，主要是打开了新世界的大门。</p>
+<h2 id="新世界"><a href="#新世界" class="headerlink" title="新世界"></a>新世界</h2><p>&nbsp;&nbsp;币圈（虚拟货币的圈子）实际已经存在12年了，08年金融危机后，一个叫中本聪的家伙发表了《比特币:一种点对点的电子现金系统》一文，其中一个重要概念就是区块链技术，两个比较重要的特点是去中心化以及匿名性，然后这俩特点又是现有金融系统的对立面，现有金融系统一般由各国中央银行发行货币，并管理加息减息及利率调整，银行系统是实名制，谁拥有多少财富一目了然，比特币交易的一个标志性事件就是2010年，一个国外程序员在论坛表达了自己的需求，用一万个比特币换两块披萨并让外卖小哥送到他家，后来有人跟他交易了，比特币会在固定时间有固定产出，每4年产量会减半，最初挖矿的这批人比较少，所以分到的比特币都比较多，随着时间的推移，比特币产量下降，挖矿人数增多，每个人分到的比特币也就少，而且有的人挖了忘记了自己的密钥，一些比特币再也找不回来了，形成一种天然的通缩，所以致使比特币连年上涨，而随着币价的上涨必然越来越多的人会觊觎这种好事，毕竟机器不会摸鱼打诨，勤勤恳恳，这也是今年显卡上涨的最根本逻辑，所以，矿难之前，别想着显卡降价，当然，按以往经验，牛市其实持续不了很久，等等党总会胜利，等等党也许会胜利，但老矿工永远不亏，亏得都是那些加杠杆做合约的人以及49年入国军，90年入苏联的人。</p>
+<h2 id="匿名币"><a href="#匿名币" class="headerlink" title="匿名币"></a>匿名币</h2><p>&nbsp;&nbsp;加密货币很重要的一个特性就是匿名性，交易中并不会有真实姓名，但是每次交易都会有一对sha256编码的交易对，虽说是匿名，但是每笔交易都会查到，如果这些交易经过了中心化的交易所，这些交易所又有kyc（Know your customer）政策，也就是实名制，所以想要追查也并不难，有一类加密货币叫匿名币，就是真正的匿名，比如说我现在挖的币叫xmr，门罗币，会使用环形签名来干扰使其无法知道生成一堆假的密钥节点，只有一个密钥节点是对的，然后接收方会用私钥来校验哪个是真的，从而促使交易成功，而一笔交易就是一个区块，将这些区块打包链接起来就是所谓的区块链，然后负责打包的会分到一部分虚拟币作为奖励，但是想要成为打包者就需要参与计算各种数学题，谁先算完谁有资格打包，这也是所谓矿机的工作原理，性能越强，算力越高，算的越快越有资格打包，也就能分到更多的币，然而现如今随着出币量越来越少，就有了矿池的概念，矿池中所有机器贡献算力，获得币的可能性就会加大，矿池的小矿工集体分币。</p>
+<h2 id="风险"><a href="#风险" class="headerlink" title="风险"></a>风险</h2><p>&nbsp;&nbsp;虚拟货币本就不是法定货币，没有任何国家或机构背书，全靠全体币圈人的共识，而且世界各国也在不停的打压，尤其是中国，因为未来碳达峰以及碳中和的远期目标，国家今年年初开始大力整治挖矿这种耗电大户，关闭了几个地方的大矿场，另外早些时候开始对加密货币资金的监控，圈内很多人的银行卡，微信及支付宝都封了，现在挖矿与交易并没有明文规定违法，性质类似于翻墙，国家也不让普通人翻墙，只是睁一只眼闭一只眼，盈亏自负，当然国家这么做当然是为了稳定，合约交易风险实在太大，一不小心就爆仓，没内情不懂技术的人跟赌博无疑，命运只能是每一次的盈利终将在最后一次被爆仓。</p>
+<h1 id="homelab"><a href="#homelab" class="headerlink" title="homelab"></a>homelab</h1><p>&nbsp;&nbsp;最开始只是想要一台X86架构的NAS，可以扩展docker，找到最后发现了微型服务器更为合适，其实homelab这个名词是我近段时间才知道的，意思是一台机器基于虚拟机系统实现不同的功能，比如NAS+软路由+windows+linux，四个系统集成在一台机器上，一般这个机器都是服务器级别的配置，all in one，其实后面还有一句话，叫all in boom，就是虚拟机崩溃之后，所有功能都会停止服务。。。比较常用的方案就是硬盘直通给群晖，网口直通给软路由，用来科学上网。</p>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>&nbsp;&nbsp;多年前，有过一台NAS，简单来说主要为网络数据服务中心，存储视频，照片，影视，文件等，买这台的时候也是积攒的电影等资源以及将近2TB，快要达到我移动硬盘的极限，然后有考虑到数据安全问题需要组raid来备份，只是买了一个威联通最基础的型号，买了两块4TB的硬盘，也考虑过群晖，但性价比来说威联通比较合适，再后来数据量又慢慢上来了，4TB有点捉襟见肘了，这个时候115网盘搞活动了，500元3年，送10TB容量，115网盘算是比较冷门的网盘，但是年费却异常的坚挺，后来我知道，他家存的数据是唯一不会被和谐的，还有离线下载几乎秒下，买了六年，20TB，然后就把nas卖掉了，最近网盘又频出幺蛾子，我一看我数据，好家伙，竟有十几TB了，还有一个问题就是在线播放的电影不能切换声道，就是说很多外国电影默认是国语配音，就很难受，最近有些东西又不让上传了，我寻思并不是个长久之计，就开始打量nas了，这次我需要至少4盘位的，然后必须是x86处理器，因为只有x86处理器可以安装docker，而docker就是另外一个世界了。</p>
+<h2 id="挑选"><a href="#挑选" class="headerlink" title="挑选"></a>挑选</h2><p>&nbsp;&nbsp;NAS其实就是从威联通与群晖里面挑，群晖性价比太低了，威联通的系统又不好用，看了挺长时间最后选了威联通的425d，性价比相对高，cpu在nas里也算比较不错的，J4125，恰好那几天又搞活动，后来刷论坛发现了惠普gen 10 plus这个神奇的机器，当然之前我听说过它的前代，gen8，当时大部分人是用来做htpc的，我当时也没有htpc的需求，所以没过多关注，然后我看到gen 10 plus之后就喜欢上了，然后搜集各种关于他的资料，最后下定决心买了它，主要考虑这几个方面，四盘位，配置高，并且可扩展，一个pci*16接口，cpu与内存都可更换，内存最大支持64GB，至强处理器，ecc内存，标准服务器配置，缺点在于只有一个pci接口，pci转m2，万兆网卡，显卡，只能三选一，后来考虑到机械硬盘raid的极限读取速度在400MB/S左右，后期可以通过usb转5g网口来拓展，显卡的话我也不做htpc，没有服务器解码需求。这货国内没有行货，看了一下德国亚马逊，算是在历史低价附近，果断下单。一个星期到货，给顺丰点个赞。</p>
+<p><a href="https://imgtu.com/i/4JAprt" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/20/4JAprt.png" alt="4JAprt.png"></a></p>
+<p><a href="https://imgtu.com/i/4Yt2rt" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Yt2rt.jpg" alt="4Yt2rt.jpg"></a></p>
+<h2 id="装系统"><a href="#装系统" class="headerlink" title="装系统"></a>装系统</h2><p>&nbsp;&nbsp;经过一段时间的研究，首选ESXI了，虚拟机巨头vmware研发的，跟普通虚拟机装系统一样，加载系统iso镜像，开始一步一步安装就可以了，这部分安装黑群晖会有点难度。pcie转接nvme硬盘用来安装esxi系统以及虚拟机，先后在这套系统上装了黑群晖，windows，以及centos，目前状态还算可以，黑群晖与windows系统做了内网穿透，可以外网访问，鉴于我vps的小水管，看大电影是别想了，这个时候服务端解码的实用性就体现出来了，可以将原片实时转码成类似各大在线视频网站的低分辨率，更流畅的视频，其实这个操作用核显就可以，群晖和威联通都可以实现此功能，但是我这个设备主板把核显给屏蔽了，要使用这个功能只能占用唯一的pci接口。至于软路由就先不装了，因为我已经把我的路由器刷成了软路由的系统，所以暂时没必要。</p>
+<p><a href="https://imgtu.com/i/4JAcQA" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/20/4JAcQA.png" alt="4JAcQA.png"></a></p>
+<h2 id="NAS（黑群晖）"><a href="#NAS（黑群晖）" class="headerlink" title="NAS（黑群晖）"></a>NAS（黑群晖）</h2><p>&nbsp;&nbsp;家庭数据中心，主要存电影，电视剧，照片等占用磁盘空间较大的文件，家中任意一台设备都可以读取里面的内容，由于群晖系统的易用性以及群晖硬件的拉跨，所以有很多牛逼的人物将群晖的引导系统做了出来从而可以在普通硬件上引导安装群晖原版系统，除了不能连外网（这个可以通过内网穿透解决），不能更新系统之外，其他都没有任何问题，最初考虑的是freenas和黑群晖，毕竟黑群晖不是正版，系统更新也包含一些安全更新，会对将来产生隐患，不过后来看那么多人用也没见哪个出问题的，freenas是看翼王的视频知道的，那期视频是他组了一个100TB的主机，可能是版权问题吧，不方便装黑群晖。</p>
+<h3 id="硬盘直通"><a href="#硬盘直通" class="headerlink" title="硬盘直通"></a>硬盘直通</h3><p>&nbsp;&nbsp;因为所有硬件都是归EXSI管，安装群晖之前要在虚拟机设置中挂载ESXI直通设备，这样群晖系统之后可以识别到硬盘，后面如果有显卡也是这样设置，需要先做直通</p>
+<p><a href="https://imgtu.com/i/4YuEan" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4YuEan.png" alt="4YuEan.png"></a></p>
+<p><a href="https://imgtu.com/i/4Yun2T" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Yun2T.png" alt="4Yun2T.png"></a></p>
+<h3 id="raid-磁盘阵列"><a href="#raid-磁盘阵列" class="headerlink" title="raid(磁盘阵列)"></a>raid(磁盘阵列)</h3><p>&nbsp;&nbsp;这个可以说是NAS存在的根本了，如果只是分享下文件，电影什么的用一个移动硬盘接到路由器上就可以了，但是安全性没法保证，万一硬盘坏掉就完蛋了，当然也可以冷备份，同步操作麻烦点，所以需要对硬盘进行raid，raid除了raid0之外都支持磁盘冗余功能，就是说多块磁盘组装到一起当某一块甚至某几块硬盘坏掉之后数据都还在。raid0虽然性能最好，容量最高，但是任一块硬盘损坏将丢失所有数据，raid1至少两盘位，容量利用为50%，双盘位一般用raid1比较安全，可以坏一块盘，raid5至少三块盘，其中一块盘做冗余，多盘位的话最好还是不要用raid5，一块盘坏了，做重建的时候万一其中一块盘也坏了那就完蛋了，而且重建的时间非常长，有的按周来计算，所以再次坏盘的概率非常大，raid10就是将两个raid1组raid0，所以最低要4块盘，最多可以坏两块盘，当然盘数越多，允许同时坏的盘数越多，数据就越安全，最常用的就这几个raid，其实还有很多其他的方式，研究下去又得花费大量时间，就选了raid10</p>
+<p><a href="https://imgtu.com/i/4YlJmD" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4YlJmD.png" alt="4YlJmD.png"></a></p>
+<h3 id="文件转移"><a href="#文件转移" class="headerlink" title="文件转移"></a>文件转移</h3><p>&nbsp;&nbsp;这是整个过程中最消耗时间的一个步骤，十几TB的文件下载下来，来源也比较多，主要是115网盘，还有百度网盘和阿里云网盘，115相对省心一些，跑满我300m的带宽问题不大，主要是百度网盘和阿里云网盘，下载总有这样那样的问题，需要重试下载，千万不能太依赖云网盘，他们对政策比较敏感，那些不合规的文件都会采取和谐处理，到底哪些合规哪些不合规，有可能上传的时候合规，等到下载的时候就不合规不让下载了，而且存的大部分视频电影可都是有版权的，万一因为版权不让下载我们也没有办法，迅雷很早就开始对版权内容无法下载了，这也是我放弃迅雷的一个原因，再往前音乐下载的封杀，也不是不支持正版，目前为止我已经买了很多的正版软件了，各种视频音乐会员也开了不少，相对于自己看还是更喜欢开弹幕一起看，感觉很热闹，只是我的很多资源在这些地方都没有，属于非常难找的类别，这部分文件一旦被封杀不能下载，那就没有别的地方可以看了，花钱也看不了。</p>
+<p><a href="https://imgtu.com/i/4Y1abF" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Y1abF.png" alt="4Y1abF.png"></a></p>
+<p><a href="https://imgtu.com/i/4Y1wE4" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Y1wE4.png" alt="4Y1wE4.png"></a></p>
+<h3 id="samba"><a href="#samba" class="headerlink" title="samba"></a>samba</h3><p>&nbsp;&nbsp;文件存储可以了，但是需要访问，samba是一个文件传输协议，windows集成的，主要用作内网，外网的话可能会有漏洞，很多电信运营商以及把所涉及的端口封了，对外的话最好用webdav，一些小网盘也有这个功能，比如坚果云。</p>
+<p>&nbsp;&nbsp;因为我的电视及投影以前都是用的KODI（视频播放软件，可以软解各种市面上的视频格式）来播放内网的影视，然后也是一直用的samba来分享，但是群晖开启samba功能，我windows这边已经可以映射网络驱动器了，但是kodi那边显示连接超时，就很疑惑，最后发现高级设置里面有个最小SMB协议是SMB2，可能是因为安全问题，所以将其改为SMB1就可以了，真坑。</p>
+<p><a href="https://imgtu.com/i/4YnlNt" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4YnlNt.png" alt="4YnlNt.png"></a></p>
+<h3 id="iscsi映射"><a href="#iscsi映射" class="headerlink" title="iscsi映射"></a>iscsi映射</h3><p>&nbsp;&nbsp;这是我最喜欢的功能之一，它可以从nas中裁处一部分空间来用作本地磁盘空间，这个跟普通磁盘映射不一样，这个是可以将软件及应用程序装进去的磁盘功能，当然，性能取决于网速，装了几个游戏，软件进去，体验还不错，那些硬盘小的设备可以轻松扩容了</p>
+<p><a href="https://imgtu.com/i/4Y8PfA" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Y8PfA.png" alt="4Y8PfA.png"></a></p>
+<h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><p>&nbsp;&nbsp;这个是重头戏了，其实这个对白群晖来说很有用，可以安装windows，linux，网络服务，数据库，各种应用程序，等等等等，只要内存够大，对我来说我可以在ESXI上创建一个linux系统在那里面玩docker，这里我只装了frp，用来做内网穿透，将群晖分享到外网，我随时随地可以访问，内网穿透之前的博客讲了怎么搞，这里就不赘述了。</p>
+<p><a href="https://imgtu.com/i/4Y8rX6" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/09/21/4Y8rX6.png" alt="4Y8rX6.png"></a></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>&nbsp;&nbsp;生命在于折腾，这几个月的折腾让人感觉苍老了许多，头发也掉了许多，最快乐的时候就是种草的瞬间以及拔草后的一段时间，或许拔草会快乐很长一段时间，拔草一时爽，一直拔草一直爽。这台微型服务器待发掘的空间还特别大，当然群晖也有许许多多的功能还待发掘，写这一篇昨天到今天至少花了我四五个小时的时间，这也是我不爱写的原因，祝中秋快乐吧。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/04/新路由newifi刷机/" rel="next" title="新路由newifi刷机">
+                <i class="fa fa-chevron-left"></i> 新路由newifi刷机
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">小峰锅</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挖矿"><span class="nav-number">2.</span> <span class="nav-text">挖矿</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新世界"><span class="nav-number">2.1.</span> <span class="nav-text">新世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名币"><span class="nav-number">2.2.</span> <span class="nav-text">匿名币</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#风险"><span class="nav-number">2.3.</span> <span class="nav-text">风险</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#homelab"><span class="nav-number">3.</span> <span class="nav-text">homelab</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘起"><span class="nav-number">3.1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挑选"><span class="nav-number">3.2.</span> <span class="nav-text">挑选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装系统"><span class="nav-number">3.3.</span> <span class="nav-text">装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAS（黑群晖）"><span class="nav-number">3.4.</span> <span class="nav-text">NAS（黑群晖）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬盘直通"><span class="nav-number">3.4.1.</span> <span class="nav-text">硬盘直通</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#raid-磁盘阵列"><span class="nav-number">3.4.2.</span> <span class="nav-text">raid(磁盘阵列)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件转移"><span class="nav-number">3.4.3.</span> <span class="nav-text">文件转移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#samba"><span class="nav-number">3.4.4.</span> <span class="nav-text">samba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iscsi映射"><span class="nav-number">3.4.5.</span> <span class="nav-text">iscsi映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker"><span class="nav-number">3.4.6.</span> <span class="nav-text">docker</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小峰锅</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">28k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">1:11</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'TYDLktqTuov9jhSoiCdzPCGD-gzGzoHsz',
+    appKey: 'ngeCFrBR9T7GDRf51gF4gnRF',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+
+  
+</div>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
